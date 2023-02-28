@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #98BB93;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 12rem;
+  background: lightblue;
+  height: 80%;
+  border-radius: 20px;
+}
+
+.details * {
+  margin: 0.5rem 0;
+}
+
+input, button {
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  padding: 1rem;
+}
+
+button {
+  background-color: orange;
+}
+
