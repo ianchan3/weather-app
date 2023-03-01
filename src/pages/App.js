@@ -11,6 +11,8 @@ export default function App() {
   const [input, setInput] = useState('');
   const [weather, setWeather] = useState({});
 
+  const iconURL = "http://openweathermap.org/img/w/";
+
   const fullDate = (d) => {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -20,7 +22,7 @@ export default function App() {
     let month = months[d.getMonth()];
     let year = d.getFullYear();
 
-    return `${day} ${date} ${month} ${year}`
+    return `${day} ${month} ${date} ${year}`
   }
 
 const handleSubmit = (e) => {
@@ -43,12 +45,15 @@ const handleSubmit = (e) => {
           <button onClick={handleSubmit}>Submit</button>
         </div>
         {typeof weather.main != 'undefined' ? (
-          <div>
+          <div className='weather-information'>
             <h1>Date: { fullDate( new Date()) }</h1>
             <h1>City: {`${ weather.name }, ${ weather.sys.country }`}</h1>
             <h1>Temperature: {` ${ weather.main.temp }°` }</h1>
             <h1>Wind: { weather.wind.speed } mph</h1>
             <h1>Description: { weather.weather[0].description }</h1>
+            <h1>Description: { weather.rain }</h1>
+            
+            {/* <img src={ `${iconURL}${weather.weather[0].icon}.png`}> </img> */}
           </div>
         ) : ("")}
         </span>

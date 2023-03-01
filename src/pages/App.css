@@ -1,19 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   background-color: #98BB93;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: linear-gradient(-35deg, #000428 0%, #004e92);
 }
 
 .details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 3rem 12rem;
-  background: lightblue;
-  height: 80%;
+  height: 80vh;
+  width: 50%;
   border-radius: 20px;
+  background: url("../assets/cold-bg.jpg");
+  /* background-image: url("https://img.freepik.com/free-vector/background-design-with-bright-stars_1308-35042.jpg?w=1480&t=st=1677706905~exp=1677707505~hmac=d5316eaade3c45a1bf00920d7c333fee1e6bdde84c15e07e1145edcd95823682"); */
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: 3px solid black;
 }
 
 .details * {
@@ -27,14 +35,25 @@ input, button {
   padding: 1rem 0;
 }
 
+.weather-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-information {
+  padding: 2rem;
+}
+
 input {
-  width: 100%;
+  width: 50%;
 }
 
 button {
   background-color: orange;
   display: block;
-  width: 100%;
+  width: 50%;
 }
 
 h1 {
