@@ -1,25 +1,40 @@
 import './App.css';
+import { useState } from 'react';
 
 export default function App() {
-  const city = "Los Angeles";
-  const date = "Feb 28 2023";
-  const temperature = 70;
-  const description = "cloudy";
-  const wind = "2 mph"
+
+  const [input, setInput] = useState('');
+  const [weather, setWeather] = useState({});
+
+  const api = {
+    key: "3db5c4a90aa425763a6b2d8a10469531",
+    base: "https://api.openweathermap.org/data/2.5/",
+  }
+
+const handleSubmit = (e) => {
+  fetch(`${api.base}weather?q=${input}&units=metric&appid=${api.key}`) 
+  .then(response => response.json())
+  .then(result => {
+    setWeather(result);
+    console.log(result);
+    setInput("");
+  })
+}
 
   return (
-    <body className="App">
-      <div className='details'>
-        <h1>Weather App</h1>
-        <input type="text" placeholder="Search By City Name"></input>
-        <button>Submit</button>
-        <h1>{ city }</h1>
-        <h1>{ date }</h1>
-        <h1>{ temperature }</h1>
-        <h1>{ description }</h1>
-        <h1>{ wind }</h1>
-      </div>
-    </body>
+    <div className="App">
+      <span className='details'>
+        <div>
+          <h1>Weather App</h1>
+          <input type="text" value={input} onChange={(e) => setInput(e.target.value)} />
+          <button onClick={handleSubmit}>Submit</button>
+        </div>
+        <div>
+        <h1>{ weather.name }</h1>
+
+        </div>
+      </span>
+    </div>
   );
 }
 
