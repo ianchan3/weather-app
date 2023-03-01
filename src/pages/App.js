@@ -40,8 +40,13 @@ const handleSubmit = (e) => {
     <div className="App">
       <span className='details'>
         <div className="weather-form">
-          <h1>Weather App</h1>
-          <input type="text" value={input} onChange={(e) => setInput(e.target.value)} onKeyPress={handleSubmit}  />
+          <h1>Weather App 🌤</h1>
+          <input 
+            type="text" 
+            placeholder="Type Any City Name"
+            value={input} 
+            onChange={(e) => setInput(e.target.value)} 
+            onKeyPress={handleSubmit} />
           <button onClick={handleSubmit}>Submit</button>
         </div>
         {typeof weather.main != 'undefined' ? (
