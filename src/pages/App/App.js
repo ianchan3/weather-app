@@ -1,0 +1,28 @@
+import './App.css';
+import Today from "../Today/Today";
+import { Routes, Route } from "react-router-dom";
+import { useState } from 'react';
+
+export default function App() {
+
+  const [input, setInput] = useState('');
+  const [weather, setWeather] = useState({});
+
+  const api = {
+    key: "3db5c4a90aa425763a6b2d8a10469531",
+    base: "https://api.openweathermap.org/data/2.5/",
+  }
+
+  let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+  return (
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Today input={input} setInput={setInput} weather={weather} setWeather={setWeather} months={months} days={days} api={api}/>} />
+      </Routes>
+    </div>
+  );
+}
+
+
