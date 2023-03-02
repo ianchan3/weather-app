@@ -1,5 +1,6 @@
 import './App.css';
 import Today from "../Today/Today";
+import Weekly from "../Weekly/Weekly";
 import { Routes, Route } from "react-router-dom";
 import { useState } from 'react';
 
@@ -17,11 +18,12 @@ export default function App() {
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
   return (
-    <div className="App">
+    <main className="App">
       <Routes>
         <Route path="/" element={<Today input={input} setInput={setInput} weather={weather} setWeather={setWeather} months={months} days={days} api={api}/>} />
+        <Route path="/weekly" element={<Weekly />} />
       </Routes>
-    </div>
+    </main>
   );
 }
 
