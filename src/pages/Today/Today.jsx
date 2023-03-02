@@ -36,12 +36,14 @@ export default function Today ({ input, setInput, weather, setWeather, months, d
       </div>
       {typeof weather.main != 'undefined' ? (
         <div className='weather-information'>
-          <h1>Date: { today( new Date()) }</h1>
-          <h1>City: {`${ weather.name }, ${ weather.sys.country }`}</h1>
-          <h1>Temperature: {` ${ weather.main.temp }°` }</h1>
-          <h1>Wind: { weather.wind.speed } mph</h1>
-          <h1>Description: { weather.weather[0].description }</h1>
-          <h1>Description: { weather.rain }</h1>
+          <h1>📅 &nbsp;Date: { today( new Date()) }</h1>
+          <h1>🌆 &nbsp;City: {`${ weather.name }, ${ weather.sys.country }`}</h1>
+          <h1>🌡️ &nbsp;Temperature: {` ${ weather.main.temp }°` }</h1>
+          <h1>💨 &nbsp;Wind: { weather.wind.speed } MPH</h1>
+          <h1>📚 &nbsp;Description: { weather.weather[0].description }</h1>
+          <h1>🤔 &nbsp;Feels Like: { weather.main.feels_like }</h1>
+          <h1>🪫 &nbsp;Minimum: { weather.main.temp_min }</h1>
+          <h1>🔋 &nbsp;Maximum: { weather.main.temp_max }</h1>
           
           {/* <img src={ `${iconURL}${weather.weather[0].icon}.png`}> </img> */}
         </div>
