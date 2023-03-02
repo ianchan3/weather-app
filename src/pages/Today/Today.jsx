@@ -11,7 +11,7 @@ export default function Today ({ input, setInput, weather, setWeather, months, d
     return `${day} ${month} ${date} ${year}`
   }
 
-  const url = weather.main?.temp > 60 ? "../../assets/cold-bg.jpg" : "../../assets/warm-bg.jpg";
+  // const url = weather.main?.temp > 60 ? "../../assets/cold-bg.jpg" : "../../assets/warm-bg.jpg";
 
   const handleSubmit = (e) => {
     if (e.key === "Enter" || e.type === "click" ) {
@@ -50,7 +50,7 @@ export default function Today ({ input, setInput, weather, setWeather, months, d
             <h1>🪫 &nbsp;Minimum: { weather.main.temp_min }°</h1>
             <h1>🔋 &nbsp;Maximum: { weather.main.temp_max }°</h1>
             
-            <img src="../../assets/cold-bg.jpg"></img>
+            {/* <img src="../../assets/cold-bg.jpg"></img> */}
           </div>
         ) : ("")}
       </span>

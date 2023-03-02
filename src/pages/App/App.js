@@ -3,6 +3,8 @@ import Today from "../Today/Today";
 import Weekly from "../Weekly/Weekly";
 import { Routes, Route } from "react-router-dom";
 import { useState } from 'react';
+import NavBar from "../../components/NavBar/NavBar";
+
 
 export default function App() {
 
@@ -19,8 +21,9 @@ export default function App() {
 
   return (
     <main className="App">
+      <NavBar />
       <Routes>
-        <Route path="/" element={<Today input={input} setInput={setInput} weather={weather} setWeather={setWeather} months={months} days={days} api={api}/>} />
+        <Route path="/today" element={<Today input={input} setInput={setInput} weather={weather} setWeather={setWeather} months={months} days={days} api={api}/>} />
         <Route path="/weekly" element={<Weekly />} />
       </Routes>
     </main>
