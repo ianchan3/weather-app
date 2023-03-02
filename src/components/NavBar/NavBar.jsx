@@ -19,8 +19,8 @@ export default function NavBar () {
       </div>
       <nav className={sideBar ? "nav-menu active" : "nav-menu"}>
         <ul className="nav-menu-items" onClick={showSideBar}>
-          <li className="navbar-toggle">
-            <Link to="#" className="menu-bars" />
+          <li className="close"> Exit Out
+            <Link to="#" className="menu-bars" /> 
               <AiIcons.AiOutlineClose />
           </li>
           {SideBarData.map((item, index) => {
