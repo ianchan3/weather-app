@@ -37,10 +37,10 @@ input, button {
 }
 
 .weather-daily-information {
-  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
-.weather-daily-information h1:first-child {
+.forecast-title {
   text-decoration: underline;
 }
 
@@ -56,6 +56,7 @@ button {
   font-weight: bold;
   font-size: 1rem;
   width: 35%;
+  cursor: pointer;
 }
 
 h1 {
@@ -76,11 +77,8 @@ h1 {
 }
 
 @media screen and (max-width: 1200px) {
-  .weather-daily-information h1 {
+  .weather-daily-information h1:nth-child(6), .weather-daily-information h1:nth-child(7), .weather-daily-information h1:nth-child(8) {
     color: yellow;
-  }
-  .weather-daily-information h1:first-child {
-    color: black;
   }
 }
 
