@@ -46,8 +46,8 @@ input, button {
 
 input {
   width: 35%;
-  padding-left: 1rem;
   outline: 3px solid black;
+  text-align: center;
 }
 
 button {

@@ -19,8 +19,6 @@ export default function Today ({ input, setInput, weather, setWeather, months, d
       .then(response => response.json())
       .then(result => {
         setWeather(result);
-        console.log(result);
-        console.log(typeof result.main.temp)
         setInput("");
       })
     }
