@@ -28,12 +28,16 @@ input, button {
   align-items: center;
 }
 
+.weather-form h1 {
+  font-size: 1.8rem;
+}
+
 .weather-form * {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .weather-daily-information {
-  padding: 2rem;
+  padding-top: 0.5rem;
 }
 
 .weather-daily-information h1:first-child {
@@ -41,7 +45,7 @@ input, button {
 }
 
 input {
-  width: 50%;
+  width: 35%;
   padding-left: 1rem;
   outline: 3px solid black;
 }
@@ -51,8 +55,7 @@ button {
   outline: 3px solid black;
   font-weight: bold;
   font-size: 1rem;
-  display: block;
-  width: 50%;
+  width: 35%;
 }
 
 h1 {
@@ -60,3 +63,36 @@ h1 {
   font-size: 1.5rem;
 }
 
+@media screen and (min-width: 1450px) {
+  .weather-form h1 {
+    font-size: 3rem;
+    padding: 1.5rem 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+    padding-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .weather-daily-information h1 {
+    color: yellow;
+  }
+  .weather-daily-information h1:first-child {
+    color: black;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .details {
+    width: 70%;
+    background-image: none;
+  }
+  h1, .weather-daily-information h1:first-child {
+    color: yellow;
+  }
+  input, button {
+    width: 50%;
+  }
+}
