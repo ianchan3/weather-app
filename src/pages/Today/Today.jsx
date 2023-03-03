@@ -40,12 +40,12 @@ export default function Today ({ input, setInput, weather, setWeather, months, d
           <div className='weather-daily-information'>
             <h1>📅 &nbsp;Date: { today( new Date()) }</h1>
             <h1>🌆 &nbsp;City: {`${ weather.name }, ${ weather.sys.country }`}</h1>
-            <h1>🌡️ &nbsp;Temperature: {` ${ weather.main.temp }°` }</h1>
+            <h1>🌡️ &nbsp;Temperature: {` ${ Math.round(weather.main.temp) }°` }</h1>
             <h1>💨 &nbsp;Wind: { Math.round(weather.wind.speed / 1.609)} MPH</h1>
             <h1>📚 &nbsp;Description: { weather.weather[0].description }</h1>
-            <h1>🤔 &nbsp;Feels Like: { weather.main.feels_like }°</h1>
-            <h1>🪫 &nbsp;Minimum: { weather.main.temp_min }°</h1>
-            <h1>🔋 &nbsp;Maximum: { weather.main.temp_max }°</h1>
+            <h1>🤔 &nbsp;Feels Like: { Math.round(weather.main.feels_like) }°</h1>
+            <h1>⬇️ &nbsp;Low: { Math.round(weather.main.temp_min) }°</h1>
+            <h1>⬆️ &nbsp;High: { Math.round(weather.main.temp_max) }°</h1>
           </div>
         ) : ("")}
       </span>

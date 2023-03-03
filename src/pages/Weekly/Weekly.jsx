@@ -38,12 +38,15 @@ let daysOfWeek = [];
       <h1 className="forecast-title">Weekly Forecast</h1>
       {typeof weather.list != 'undefined' ? (
         <div className="weather-weekly-information">
-          { daysOfWeek.map((dayOfWeek) => 
-            <h1>{dayOfWeek} {weather?.list[1].main?.temp}</h1>
-          )}
-        <h1>{ weather.city?.name } {weather.city?.country }</h1>
+          <h1>{ days[day] }: { Math.round(weather?.list[0].main?.temp) }°</h1>
+          <h1>{ days[day + 1] }: { Math.round(weather?.list[8].main?.temp) }°</h1>
+          <h1>{ days[0] }: { Math.round(weather?.list[16].main?.temp) }°</h1>
+          <h1>{ days[1] }: { Math.round(weather?.list[24].main?.temp) }°</h1>
+          <h1>{ days[2] }: { Math.round(weather?.list[32].main?.temp) }°</h1>
+          <h1>{ days[3] }: { Math.round(weather?.list[39].main?.temp) }°</h1>
+        <h1>🌆 &nbsp;City:{ weather.city?.name } {weather.city?.country }</h1>
         <h1>{ weather?.list[0]?.dt_txt } </h1>
-        <h1>{ weather?.list[0]?.main?.temp }</h1>
+        <h1>🌡️ &nbsp;Temperature: { Math.round(weather?.list[0]?.main?.temp) }°</h1>
       </div>
        ) : ("")} 
     </span>

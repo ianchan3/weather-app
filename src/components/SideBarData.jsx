@@ -5,13 +5,13 @@ import * as AiIcons from 'react-icons/ai';
 export const SideBarData = [
   {
     'title': 'Home',
-    path: '/today',
+    path: '/',
     icon: <AiIcons.AiFillHome />,
     cName: 'nav-text'
   },
   {
     'title': "Today's Forecast",
-    path: '/today',
+    path: '/',
     icon: <FaIcons.FaCalendarDay/>,
     cName: 'nav-text'
   },
