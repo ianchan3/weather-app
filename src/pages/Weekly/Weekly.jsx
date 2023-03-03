@@ -14,6 +14,14 @@ const handleSubmit = (e) => {
     })
   }
 }
+
+let d = new Date();
+let day = d.getDay();
+let daysOfWeek = [];
+
+  for (let i = day; i < days.length; i++) {
+    daysOfWeek.push(days[i]);
+  }
   return (
     <span className="details" id="weekly">
       <div className="weather-form">
@@ -28,15 +36,16 @@ const handleSubmit = (e) => {
         <button onClick={handleSubmit}>Click Me or Press Enter</button>
       </div>
       <h1 className="forecast-title">Weekly Forecast</h1>
-      { days.map((day) => 
-            <h1>{day}</h1>
+      {typeof weather.list != 'undefined' ? (
+        <div className="weather-weekly-information">
+          { daysOfWeek.map((dayOfWeek) => 
+            <h1>{dayOfWeek} {weather?.list[1].main?.temp}</h1>
           )}
-      {typeof weather.main != 'undefined' ? (
-      <div className="weather-weekly-information">
-        <h1>{ weather.city.name} {weather.city.country}</h1>
-        {/* <h1>{ weather?.list[0]?.dt_txt} {weather?.list[0]?.main.temp}</h1> */}
+        <h1>{ weather.city?.name } {weather.city?.country }</h1>
+        <h1>{ weather?.list[0]?.dt_txt } </h1>
+        <h1>{ weather?.list[0]?.main?.temp }</h1>
       </div>
-      ) : ("")}
+       ) : ("")} 
     </span>
   )
 }

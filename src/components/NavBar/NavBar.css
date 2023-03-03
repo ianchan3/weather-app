@@ -3,9 +3,16 @@
   height: 80px;
   position: absolute;
   top: 6%;
-  left: 26%;
+  left: 26.5%;
   cursor: pointer;
   border-radius: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .navbar {
+    left: 0;
+    top: 0.5%;
+  }
 }
 
 .navbar svg {
