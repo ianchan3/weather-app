@@ -20,12 +20,13 @@ let day = d.getDay();
 let daysOfWeek = [];
 
   for (let i = day; i < days.length; i++) {
+
     daysOfWeek.push(days[i]);
   }
   return (
     <span className="details" id="weekly">
+        <h1 className="title">Weather App 🌤</h1>
       <div className="weather-form">
-        <h1>Weather App 🌤</h1>
         <input 
           type="text"
           placeholder="Type Any City Name"
@@ -33,21 +34,21 @@ let daysOfWeek = [];
           onChange={(e) => setInput(e.target.value)}
           onKeyPress={handleSubmit}
         />
-        <button onClick={handleSubmit}>Click Me or Press Enter</button>
+        <button onClick={handleSubmit}>🔍</button>
       </div>
       <h1 className="forecast-title">Weekly Forecast</h1>
       {typeof weather.list != 'undefined' ? (
         <div className="weather-weekly-information">
-          <h1>{ days[day] }: { Math.round(weather?.list[0].main?.temp) }°</h1>
-          <h1>{ days[day + 1] }: { Math.round(weather?.list[8].main?.temp) }°</h1>
-          <h1>{ days[0] }: { Math.round(weather?.list[16].main?.temp) }°</h1>
-          <h1>{ days[1] }: { Math.round(weather?.list[24].main?.temp) }°</h1>
-          <h1>{ days[2] }: { Math.round(weather?.list[32].main?.temp) }°</h1>
-          <h1>{ days[3] }: { Math.round(weather?.list[39].main?.temp) }°</h1>
-        <h1>🌆 &nbsp;City:{ weather.city?.name } {weather.city?.country }</h1>
-        <h1>{ weather?.list[0]?.dt_txt } </h1>
-        <h1>🌡️ &nbsp;Temperature: { Math.round(weather?.list[0]?.main?.temp) }°</h1>
-      </div>
+
+          <h1>🥳 &nbsp;{ days[day] }: { Math.round(weather?.list[0].main?.temp) }°</h1>
+          <h1>😎 &nbsp;{ days[day + 1] }: { Math.round(weather?.list[8].main?.temp) }°</h1>
+          <h1>😃 &nbsp;{ days[0] }: { Math.round(weather?.list[16].main?.temp) }°</h1>
+          <h1>😢 &nbsp;{ days[1] }: { Math.round(weather?.list[24].main?.temp) }°</h1>
+          <h1>😔 &nbsp;{ days[2] }: { Math.round(weather?.list[32].main?.temp) }°</h1>
+          <h1>😑 &nbsp;{ days[3] }: { Math.round(weather?.list[39].main?.temp) }°</h1>
+          <h1>🌆 &nbsp;City:{ weather.city?.name } {weather.city?.country }</h1>
+          <h1>🌡️ &nbsp;Temperature: { Math.round(weather?.list[0]?.main?.temp) }°</h1>
+        </div>
        ) : ("")} 
     </span>
   )

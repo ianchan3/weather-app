@@ -12,9 +12,8 @@ export default function NavBar () {
   const showSideBar = () => setSideBar(!sideBar);
   return (
     <>
-    <IconContext.Provider value={{color: "#fff"}}>
       <div className="navbar">
-        <Link to="#" className='menu-bars' />
+        <Link to="#" className='menu-bars' id="menu-bars" />
           <FaIcons.FaBars onClick={showSideBar} />
       </div>
       <nav className={sideBar ? "nav-menu active" : "nav-menu"}>
@@ -34,7 +33,6 @@ export default function NavBar () {
           })}
         </ul>
       </nav>
-      </IconContext.Provider>
     </>
   )
 }

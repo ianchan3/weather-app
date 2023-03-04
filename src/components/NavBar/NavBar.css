@@ -1,17 +1,26 @@
 .navbar {
   background-color: #060b26;
+  color: white;
   height: 80px;
   position: absolute;
   top: 6%;
   left: 26.5%;
   cursor: pointer;
   border-radius: 20px;
+  border: 3px solid white;
+}
+
+.navbar:hover {
+  color: #F9C811;
+  border: 3px solid #F9C811;
 }
 
 @media screen and (max-width: 800px) {
   .navbar {
     left: 0;
     top: 0.5%;
+    height: 70px;
+    width: 80px;
   }
 }
 
