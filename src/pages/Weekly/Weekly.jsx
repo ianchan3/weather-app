@@ -20,7 +20,6 @@ let day = d.getDay();
 let daysOfWeek = [];
 
   for (let i = day; i < days.length; i++) {
-
     daysOfWeek.push(days[i]);
   }
   return (
@@ -39,13 +38,12 @@ let daysOfWeek = [];
       <h1 className="forecast-title">Weekly Forecast</h1>
       {typeof weather.list != 'undefined' ? (
         <div className="weather-weekly-information">
-
           <h1>🥳 &nbsp;{ days[day] }: { Math.round(weather?.list[0].main?.temp) }°</h1>
           <h1>😎 &nbsp;{ days[day + 1] }: { Math.round(weather?.list[8].main?.temp) }°</h1>
-          <h1>😃 &nbsp;{ days[0] }: { Math.round(weather?.list[16].main?.temp) }°</h1>
-          <h1>😢 &nbsp;{ days[1] }: { Math.round(weather?.list[24].main?.temp) }°</h1>
-          <h1>😔 &nbsp;{ days[2] }: { Math.round(weather?.list[32].main?.temp) }°</h1>
-          <h1>😑 &nbsp;{ days[3] }: { Math.round(weather?.list[39].main?.temp) }°</h1>
+          <h1>😃 &nbsp;{ days[day + 2] }: { Math.round(weather?.list[16].main?.temp) }°</h1>
+          <h1>😢 &nbsp;{ days[day + 3] }: { Math.round(weather?.list[24].main?.temp) }°</h1>
+          <h1>😔 &nbsp;{ days[day + 4 ] }: { Math.round(weather?.list[32].main?.temp) }°</h1>
+          <h1>😑 &nbsp;{ days[day + 5] }: { Math.round(weather?.list[39].main?.temp) }°</h1>
           <h1>🌆 &nbsp;City:{ weather.city?.name } {weather.city?.country }</h1>
           <h1>🌡️ &nbsp;Temperature: { Math.round(weather?.list[0]?.main?.temp) }°</h1>
         </div>
