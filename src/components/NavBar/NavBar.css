@@ -1,9 +1,9 @@
 .navbar {
   background-color: #060b26;
   color: white;
-  height: 80px;
+  height: 70px;
   position: absolute;
-  top: 6%;
+  top: 5%;
   left: 26.5%;
   cursor: pointer;
   border-radius: 20px;
@@ -15,20 +15,26 @@
   border: 3px solid #F9C811;
 }
 
-@media screen and (max-width: 800px) {
-  .navbar {
-    left: 0;
-    top: 0.5%;
-    height: 70px;
-    width: 80px;
-  }
-}
-
 .navbar svg {
   position: absolute;
-  top: 30%;
-  left: 33%;
+  top: 25%;
+  left: 32%;
   font-size: 2rem;
+}
+
+@media screen and (max-width: 850px) {
+  .navbar {
+    left: 1%;
+    top: 0.5%;
+    height: 60px;
+    width: 70px;
+  }
+  .navbar svg {
+    position: absolute;
+    top: 25%;
+    left: 27%;
+    font-size: 2rem;
+  }
 }
 
 .menu-bars {
