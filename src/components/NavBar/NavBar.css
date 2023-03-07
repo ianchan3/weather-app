@@ -4,7 +4,7 @@
   height: 70px;
   position: absolute;
   top: 5%;
-  left: 17%;
+  left: 12%;
   cursor: pointer;
   border-radius: 20px;
   border: 3px solid white;
@@ -22,9 +22,9 @@
   font-size: 2rem;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
   .navbar {
-    left: 1%;
+    left: 3%;
     top: 2%;
     height: 60px;
     width: 70px;
