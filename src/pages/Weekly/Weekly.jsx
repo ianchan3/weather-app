@@ -17,7 +17,7 @@ const handleSubmit = (e) => {
 
   return (
     <span className="details" id="weekly">
-        <h1 className="title">Weather App 🌤</h1>
+        <h1 className="title">Weather App <h1 className="picture"></h1></h1>
       <div className="weather-form">
         <input 
           type="text"

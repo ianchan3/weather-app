@@ -8,6 +8,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: linear-gradient(-35deg, #000428 0%, #004e92);
+  height: 120vh;
+  background: linear-gradient(-35deg, #ffffff 0%, #004e92);
 }

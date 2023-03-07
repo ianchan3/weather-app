@@ -4,15 +4,15 @@
   height: 70px;
   position: absolute;
   top: 5%;
-  left: 26.5%;
+  left: 17%;
   cursor: pointer;
   border-radius: 20px;
   border: 3px solid white;
 }
 
 .navbar:hover {
-  color: #F9C811;
-  border: 3px solid #F9C811;
+  color: yellow;
+  border: 3px solid yellow;
 }
 
 .navbar svg {
