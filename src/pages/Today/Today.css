@@ -1,13 +1,13 @@
 .details {
   height: 93vh;
-  width: 50%;
+  width: 70%;
   border-radius: 20px;
   /* background: url("../../assets/cold-bg.jpg"); */
   /* background-image: url("https://img.freepik.com/free-vector/background-design-with-bright-stars_1308-35042.jpg?w=1480&t=st=1677706905~exp=1677707505~hmac=d5316eaade3c45a1bf00920d7c333fee1e6bdde84c15e07e1145edcd95823682"); */
   background-repeat: repeat;
   background-size: cover;
   background-position: center;
-  margin-bottom: 8rem;
+  /* margin-bottom: 8rem; */
 }
 
 
@@ -33,7 +33,7 @@ input, button {
 
 .weather-daily-information h1, .weather-weekly-information h1 {
   background-color: white;
-  margin: 2rem 0.5rem;
+  margin: 1.3rem 0.5rem;
   overflow-y: hidden;
   border-radius: 30px;
 }
@@ -79,9 +79,6 @@ h1 {
 }
 
 @media screen and (min-width: 1450px) {
-  .details {
-    margin-bottom: 16rem;
-  }
   .title {
     font-size: 3rem;
     padding: 1.5rem 0;
@@ -118,6 +115,10 @@ h1 {
   }
   .details {
     margin-bottom: 9rem;
+  }
+
+  .App {
+    height: 120vh;
   }
   .weather-daily-information h1, .weather-weekly-information h1 {
     margin: 1rem 0;
