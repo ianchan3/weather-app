@@ -21,7 +21,7 @@ const handleSubmit = (e) => {
       <div className="weather-form">
         <input 
           type="text"
-          placeholder="Type Any City Name"
+          placeholder="Type Any City"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyPress={handleSubmit}

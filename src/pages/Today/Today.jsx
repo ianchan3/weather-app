@@ -28,7 +28,7 @@ export default function Today ({ input, setInput, weather, setWeather, months, d
         <div className="weather-form">
           <input 
             type="text" 
-            placeholder="Type Any City Name"
+            placeholder="Type Any City"
             value={input} 
             onChange={(e) => setInput(e.target.value)} 
             onKeyPress={handleSubmit} 
@@ -46,8 +46,6 @@ export default function Today ({ input, setInput, weather, setWeather, months, d
             <h1>🤔 &nbsp;Feels Like: { Math.round(weather.main.feels_like) }°</h1>
             <h1>⬇️ &nbsp;Low: { Math.round(weather.main.temp_min) }°</h1>
             <h1>⬆️ &nbsp;High: { Math.round(weather.main.temp_max) }°</h1>
-            <h1>🌅 &nbsp;Sunrise: { weather.sys.sunrise.toString() }</h1>
-            <h1>🌆 &nbsp;Sunset: { weather.sys.sunset }</h1>
           </div>
         ) : ("")}
       </span>
