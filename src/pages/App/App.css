@@ -5,10 +5,9 @@
 }
 
 .App {
-  background-color: #98BB93;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 120vh;
   background: linear-gradient(-35deg, #000428 0%, #004e92);
 }
