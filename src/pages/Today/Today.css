@@ -1,9 +1,7 @@
 .details {
   height: 120vh;
-  width: 70%;
+  width: 80%;
   border-radius: 20px;
-  /* background: url("../../assets/cold-bg.jpg"); */
-  /* background-image: url("https://img.freepik.com/free-vector/background-design-with-bright-stars_1308-35042.jpg?w=1480&t=st=1677706905~exp=1677707505~hmac=d5316eaade3c45a1bf00920d7c333fee1e6bdde84c15e07e1145edcd95823682"); */
   background-repeat: repeat;
   background-size: cover;
   background-position: center;
@@ -33,12 +31,16 @@ input:hover, button:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 0 1rem 1rem 1rem;
+  margin: 0 1rem 3rem 1rem;
 }
 
-.weather-daily-information, .weather-weekly-information {
+.first-row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+.second-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .weather-daily-information h1, .weather-weekly-information h1 {
@@ -62,7 +64,7 @@ input:hover, button:hover {
 .forecast-title {
   background-color: white;
   color: black;
-  margin: 0rem 12.5rem 0.5rem 12.5rem;
+  margin: 0rem 12.5rem 1.5rem 12.5rem;
   border-radius: 30px;
 }
 
@@ -123,7 +125,7 @@ h1 {
   input, button {
     width: 50%;
   }
-  .weather-daily-information, .weather-weekly-information {
+  .first-row, .second-row {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }  
