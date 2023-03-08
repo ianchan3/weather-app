@@ -20,13 +20,13 @@ export default function App() {
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
   return (
-    <main className="App">
+    <>
       <NavBar />
       <Routes>
         <Route path="/" element={<Today input={input} setInput={setInput} weather={weather} setWeather={setWeather} months={months} days={days} api={api}/>} />
         <Route path="/weekly" element={<Weekly input={input} setInput={setInput} weather={weather} setWeather={setWeather} api={api} months={months} days={days}/>} />
       </Routes>
-    </main>
+    </>
   );
 }
 

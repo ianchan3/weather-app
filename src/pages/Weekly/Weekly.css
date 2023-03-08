@@ -1,0 +1,13 @@
+.Weekly {
+  background: linear-gradient(-35deg, #ffffff 0%, #011222);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120vh;
+}
+
+@media screen and (max-width: 1100px) {
+  .Weekly {
+    height: 135vh;
+  }
+}

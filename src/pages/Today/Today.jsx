@@ -23,7 +23,9 @@ export default function Today ({ input, setInput, weather, setWeather, months, d
     }
   }
   return (
+    <main className="Today">
       <span className='details'>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700;800&family=Roboto:wght@300&display=swap" rel="stylesheet"></link>
           <h1 className="title">Weather App <h1 className="picture"></h1></h1>
         <div className="weather-form">
           <input 
@@ -35,23 +37,23 @@ export default function Today ({ input, setInput, weather, setWeather, months, d
           />
           <button onClick={handleSubmit}>🔍</button>
         </div>
-        <h1 className="forecast-title">Today's Forecast</h1>
         {typeof weather.main != 'undefined' ? (
           <div className='weather-daily-information'>
-            <div className="first-row">
-              <h1>📅 &nbsp;Date: { today( new Date()) }</h1>
-              <h1>🌆 &nbsp;City: {`${ weather.name }, ${ weather.sys.country }`}</h1>
-            </div>
-            <div className="second-row">
-              <h1>🌡️&nbsp;Temperature: {` ${ Math.round(weather.main.temp) }°` }</h1>
-              <h1>📚&nbsp;Description: { weather.weather[0].description }</h1>
-              <h1>💨 &nbsp;Wind: { Math.round(weather.wind.speed / 1.609)} MPH</h1>
-              <h1>🤔 &nbsp;Feels Like: { Math.round(weather.main.feels_like) }°</h1>
-              <h1>⬇️ &nbsp;Low: { Math.round(weather.main.temp_min) }°</h1>
-              <h1>⬆️ &nbsp;High: { Math.round(weather.main.temp_max) }°</h1>
-            </div>
+              <h1 className="date">{ today( new Date()) }</h1>
+              <h1>{`${ weather.name }, ${ weather.sys.country }`}</h1>
+              <h1 className="temp"> {` ${ Math.round(weather.main.temp) }°` }</h1>
+              <h1>Low: { Math.round(weather.main.temp_min) }° / High: { Math.round(weather.main.temp_max) }°</h1>
+              <div className="smaller-details">
+                <h1>Description </h1>
+                <h1>Wind </h1>
+                <h1>Feels Like </h1>
+                <h1> { weather.weather[0].main } </h1>
+                <h1> { Math.round(weather.wind.speed / 1.609)} MPH</h1>
+                <h1> { Math.round(weather.main.feels_like) }°</h1>
+              </div>
           </div>
         ) : ("")}
       </span>
+    </main>
   )
 }

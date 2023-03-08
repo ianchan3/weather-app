@@ -4,7 +4,7 @@
   height: 70px;
   position: absolute;
   top: 5%;
-  left: 12%;
+  left: 25%;
   cursor: pointer;
   border-radius: 20px;
   border: 3px solid white;
@@ -22,18 +22,41 @@
   font-size: 2rem;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1050px) {
   .navbar {
-    left: 3%;
-    top: 2%;
+    left: 5%;
+    top: 3%;
     height: 60px;
     width: 70px;
   }
   .navbar svg {
     position: absolute;
-    top: 25%;
-    left: 27%;
+    top: 23%;
+    left: 25%;
     font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 2350px) {
+  .navbar {
+    left: 31%;
+    top: 5%;
+    height: 70px;
+    width: 80px;
+  }
+  .navbar svg {
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 2950px) {
+  .navbar {
+    left: 33.5%;
+    top: 5%;
+    height: 70px;
+    width: 80px;
   }
 }
 

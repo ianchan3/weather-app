@@ -3,11 +3,3 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-.App {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 120vh;
-  background: linear-gradient(-35deg, #ffffff 0%, #004e92);
-}

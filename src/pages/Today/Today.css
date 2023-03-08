@@ -1,6 +1,14 @@
+.Today {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120vh;
+  background: linear-gradient(-35deg, #ffffff 0%, #004e92);
+}
+
 .details {
   height: 120vh;
-  width: 80%;
+  width: 100%;
   border-radius: 20px;
   background-repeat: repeat;
   background-size: cover;
@@ -34,25 +42,36 @@ input:hover, button:hover {
   margin: 0 1rem 3rem 1rem;
 }
 
-.first-row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.weather-daily-information, .weather-weekly-information {
+  background-color: white;
+  font-family: "Nunito";
+  border-radius: 50px;
+  margin-left: 20rem;
+  margin-right: 20rem;
+  padding: 40px;
 }
-.second-row {
+
+.weather-weekly-information h1 {
+  font-size: 1.8rem;
+}
+
+.temp {
+  font-size: 5rem;
+}
+.smaller-details {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-
-.weather-daily-information h1, .weather-weekly-information h1 {
-  background-color: white;
-  margin: 1.3rem 0.5rem;
-  overflow-y: hidden;
-  border-radius: 30px;
+.smaller-details h1:nth-child(1), .smaller-details h1:nth-child(2), .smaller-details h1:nth-child(3), .date {
+  font-weight: 700;
+}
+.smaller-details h1:nth-child(4), .smaller-details h1:nth-child(5), .smaller-details h1:nth-child(6) {
+  font-weight: 400;
 }
 
 .title {
   font-size: 2.3rem;
-  color: white;
+  color: black;
   padding-bottom: 0;
   padding-top: 2.7rem;
 }
@@ -61,15 +80,8 @@ input:hover, button:hover {
   margin: 0 0 0.5rem 0.5rem;
 }
 
-.forecast-title {
-  background-color: white;
-  color: black;
-  margin: 0rem 12.5rem 1.5rem 12.5rem;
-  border-radius: 30px;
-}
-
 input {
-  width: 28%;
+  width: 20%;
   outline: 3px solid black;
   text-align: center;
 }
@@ -82,14 +94,14 @@ button {
   outline: 3px solid black;
   font-weight: bold;
   font-size: 1rem;
-  width: 10%;
+  width: 5%;
   height: 45px;
   cursor: pointer;
 }
 
 h1 {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   padding-top: 0.55rem;
   padding-bottom: 0.55rem;
 }
@@ -105,34 +117,46 @@ h1 {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
-  .forecast-title {
-    font-size: 2.5rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-  }
   .picture {
-    background-size: 15%;
+    background-size: 10%;
+  }
+  .weather-daily-information {
+    margin-left: 25rem;
+    margin-right: 25rem;
   }
 }
 
-@media screen and (max-width: 800px) {
-  .details {
-    width: 70%;
-    background-image: none;
+@media screen and (min-width: 2350px) {
+  .picture {
+    background-size: 7.5%;
   }
+  .weather-daily-information {
+    margin-left: 45rem;
+    margin-right: 45rem;
+  }
+}
+@media screen and (min-width: 2950px) {
+  .picture {
+    background-size: 7.5%;
+  }
+  .weather-daily-information {
+    margin-left: 65rem;
+    margin-right: 65rem;
+  }
+}
 
-  input, button {
+@media screen and (max-width: 1100px) {
+  .details {
+    width: 80%;
+  }
+  input {
     width: 50%;
   }
-  .first-row, .second-row {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-  }  
+  button {
+    width: 10%;
+  }
   h1 {
    padding: 0rem; 
-  }
-  .weather-form {
-    margin: 0 0 2rem 0;
   }
   .details {
     margin-bottom: 9rem;
@@ -140,13 +164,17 @@ h1 {
   .forecast-title {
     margin: 0 0 1rem 0;
   }
-  .App {
+  .Today {
     height: 135vh;
   }
   .weather-daily-information h1, .weather-weekly-information h1 {
     margin: 1rem 0;
   }
+  .weather-daily-information, .weather-weekly-information {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
   .picture {
-    background-size: 30%;
+    background-size: 25%;
   }
 }
