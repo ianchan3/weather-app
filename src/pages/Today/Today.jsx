@@ -43,7 +43,7 @@ export default function Today ({ input, setInput, weather, setWeather, months, d
     <main className="Today">
       <span className='details'>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700;800&family=Roboto:wght@300&display=swap" rel="stylesheet"></link>
-          <h1 className="title">Weather App <h1 className="picture"></h1></h1>
+          <h1 className="title">Weather Forecast <h1 className="picture"></h1></h1>
         <div className="weather-form">
           <button id="location" onClick={getLocation}></button>
           <input 

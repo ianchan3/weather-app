@@ -33,7 +33,7 @@ const getLocation = () => {
   return (
     <main className="Weekly">
       <span className="details">
-          <h1 className="title">Weather App <h1 className="picture"></h1></h1>
+          <h1 className="title">Weather Forecast <h1 className="picture"></h1></h1>
         <div className="weather-form">
           <button id="location" onClick={getLocation}></button>
           <input 

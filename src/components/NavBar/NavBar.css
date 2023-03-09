@@ -3,7 +3,7 @@
   color: white;
   height: 70px;
   position: absolute;
-  top: 5%;
+  top: 2.5%;
   left: 25%;
   cursor: pointer;
   border-radius: 20px;
@@ -24,8 +24,8 @@
 
 @media screen and (max-width: 1050px) {
   .navbar {
-    left: 5%;
-    top: 3%;
+    left: 3%;
+    top: 2%;
     height: 60px;
     width: 70px;
   }
@@ -37,7 +37,7 @@
   }
 }
 
-@media screen and (min-width: 2350px) {
+@media screen and (min-width: 1500px) {
   .navbar {
     left: 31%;
     top: 5%;
