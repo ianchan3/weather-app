@@ -15,6 +15,13 @@
   background-position: center;
 }
 
+#location {
+  background-image: url("https://cdn-icons-png.flaticon.com/512/1865/1865269.png");
+  background-position: center;
+  background-size: 45%;
+  background-repeat: no-repeat;
+}
+
 .picture {
   background-image: url("https://react-weather-app-leroywagner.vercel.app/animated/cloudy-day-1.svg");
   background-repeat: no-repeat;
@@ -134,6 +141,9 @@ h1 {
     margin-left: 45rem;
     margin-right: 45rem;
   }
+  #location {
+    background-size: 30%;
+  }
 }
 @media screen and (min-width: 2950px) {
   .picture {
@@ -142,6 +152,9 @@ h1 {
   .weather-daily-information {
     margin-left: 65rem;
     margin-right: 65rem;
+  }
+  #location {
+    background-size: 22%;
   }
 }
 
@@ -176,5 +189,8 @@ h1 {
   }
   .picture {
     background-size: 25%;
+  }
+  #location {
+    background-size: 52%;
   }
 }

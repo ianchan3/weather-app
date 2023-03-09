@@ -10,6 +10,7 @@ export default function App() {
 
   const [input, setInput] = useState('');
   const [weather, setWeather] = useState({});
+  const [status, setStatus] = useState("");
 
   const api = {
     key: "3db5c4a90aa425763a6b2d8a10469531",
@@ -23,7 +24,7 @@ export default function App() {
     <>
       <NavBar />
       <Routes>
-        <Route path="/" element={<Today input={input} setInput={setInput} weather={weather} setWeather={setWeather} months={months} days={days} api={api}/>} />
+        <Route path="/" element={<Today input={input} setInput={setInput} weather={weather} setWeather={setWeather} months={months} days={days} api={api} status={status} setStatus={setStatus}/>} />
         <Route path="/weekly" element={<Weekly input={input} setInput={setInput} weather={weather} setWeather={setWeather} api={api} months={months} days={days}/>} />
       </Routes>
     </>
