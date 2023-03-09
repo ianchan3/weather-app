@@ -1,7 +1,6 @@
 import "./Weekly.css";
-import { useEffect } from "react";
 
-export default function Weekly ({ months, days, api, input, setInput, weather, setWeather }) {
+export default function Weekly ({ days, api, input, setInput, weather, setWeather, status, setStatus }) {
 
 const handleSubmit = (e) => {
   if (e.type === "click" || e.key === "Enter") {
@@ -15,11 +14,28 @@ const handleSubmit = (e) => {
   }
 }
 
+const getLocation = () => {
+  if (!navigator.geolocation) {
+    setStatus("Geolocation is not supported by your browser");
+  } else {
+    setStatus("Locating...");
+    navigator.geolocation.getCurrentPosition((position) => {
+      setStatus(null);
+      fetch(`${api.base}forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=imperial&appid=${api.key}`) 
+      .then(response => response.json())
+      .then(result => {
+        setWeather(result);
+      })
+    })
+  }
+}
+
   return (
     <main className="Weekly">
       <span className="details">
           <h1 className="title">Weather App <h1 className="picture"></h1></h1>
         <div className="weather-form">
+          <button id="location" onClick={getLocation}></button>
           <input 
             type="text"
             placeholder="Type Any City"
@@ -29,7 +45,6 @@ const handleSubmit = (e) => {
           />
           <button onClick={handleSubmit}>🔍</button>
         </div>
-        {/* <h1 className="forecast-title">Weekly Forecast</h1> */}
         {typeof weather.list != 'undefined' ? (
           <div className="weather-weekly-information">
               <h1>😎 &nbsp;{ days[0] }: { Math.round(weather?.list[0].main?.temp) }°</h1>

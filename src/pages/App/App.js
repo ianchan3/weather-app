@@ -25,7 +25,7 @@ export default function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Today input={input} setInput={setInput} weather={weather} setWeather={setWeather} months={months} days={days} api={api} status={status} setStatus={setStatus}/>} />
-        <Route path="/weekly" element={<Weekly input={input} setInput={setInput} weather={weather} setWeather={setWeather} api={api} months={months} days={days}/>} />
+        <Route path="/weekly" element={<Weekly input={input} setInput={setInput} weather={weather} setWeather={setWeather} api={api} months={months} days={days} status={status} setStatus={setStatus}/>} />
       </Routes>
     </>
   );
